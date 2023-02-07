@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class GabonetakoArbola {
+
+    public static void main(String[] args) {
+        Scanner sarrera = new Scanner (System.in);
+        System.out.println("Ze zenbakitararteko triangelua imprimitu nahi duzu: ");
+        int zenbakia = sarrera.nextInt();
+        marraztu(zenbakia);
+    }
+    public static void marraztu(int n){
+        for (int i=n; i>=1; i--){
+            for (int j=1; j<=i; j++){
+                System.out.print(" ");
+            }
+            for (int k=i; k<=n; k++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i=n-2; i>=1; i--){
+            for (int j=1; j<=i; j++){
+                System.out.print(" ");
+            }
+            for (int k=i; k<=n; k++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(int i=0; i<3; i++){
+            System.out.print(" ");
+            for(int j=1; j<(n/2); j++){
+                System.out.print("  ");
+            }
+            System.out.println("* *");
+        }
+        for (int i=0; i<n; i++){
+            System.out.println(" *");
+        }
+    }
+
+}
